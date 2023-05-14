@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REGISTOR</title>
+    <link rel="stylesheet" href="registor.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <div id="registor">
+        <div class="top">
+            <h2> Register Here 🌐 </h2>
+        </div>
+        <div class="content">
+            <form action="registor" method="post" class="form">
+                <label for="fname">First Name :</label>
+                <br>
+                <i class="fa fa-address-book" style="font-size:2rem"></i>
+                <input type="text" id="name" placeholder="Enter Your First Name">
+                <br><br>
+                <label for="lname">Last Name :</label>
+                <br>
+                <i class="fa fa-address-book" style="font-size:2rem"></i>
+                <input type="text" id="name" placeholder="Enter Your Last Name">
+                <br><br>
+                <label for="age">Age :</label>
+                <br>
+                <i class="fa fa-calendar" style="font-size:2rem"></i>
+                <input type="number" name="age" id="name" placeholder="How Old Are You :">
+                <br><br>
+                <label for="mail">Email Address :</label>
+                <br>
+                <i class="fa fa-envelope-o" style="font-size:2rem"></i>
+                <input type="email" name="email" id="name" placeholder="Enter Your valid Email :">
+                <br><br>
+                <i class="fa fa-intersex" style="font-size:2rem"></i>
+                <label for="gender">Gender :</label>
+                <br>
+                &nbsp;&nbsp;&nbsp;
+                <input type="radio" name="gender" id="male">
+                &nbsp;
+                <span id="male">Male</span>
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="radio" name="gender" id="female">
+                &nbsp;
+                <span id="female">Female</span>
+                <br><br>
+                <i class="fa fa-code" style="font-size:2rem"></i>
+                <label for="language"> Known Languages :</label>
+                <br>
+            <div class="languages">
+                &nbsp;&nbsp;&nbsp;
+                <input type="checkbox" name="language" id="C">
+                &nbsp;
+                <span id="c">C</span>
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="checkbox" name="language" id="C++">
+                &nbsp;
+                <span id="c++">C++</span>
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="checkbox" name="language" id="Java">
+                &nbsp;
+                <span id="java">Java</span>
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="checkbox" name="language" id="angular">
+                &nbsp;
+                <span id="js">JavaScript</span>
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="checkbox" name="other" id="other">
+                &nbsp;
+                <span id="other">Other</span>
+            </div>
+                <br><br>
+                <i class="fa fa-code" style="font-size:2rem"></i>
+                <label for="fwork"> Known Frameworks :</label>
+                <br>
+                &nbsp;&nbsp;&nbsp;
+            <div class="frameworks">
+                <input type="checkbox" name="fwork" id="tailwind">
+                &nbsp;
+                <span id="tailwind">Tail-Wind</span>
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="checkbox" name="fwork" id="bootstrap">
+                &nbsp;
+                <span id="bootstrap">Bootstrap</span>
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="checkbox" name="fwork" id="react">
+                &nbsp;
+                <span id="react">React js</span>
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="checkbox" name="fwork" id="angular">
+                &nbsp;
+                <span id="angular">Angular js</span>
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="checkbox" name="other" id="other">
+                &nbsp;
+                <span id="other">Other</span>
+            </div>
+                <br><br> <br>
+                <div class="buttons">
+                <input type="button" value="Submit" name="submit" id="submit" onclick="window.alert('Submission Complete!')">
+                <input type="reset" value="Reset" name="reset" id="reset">
+                <button type="button" value="Back" name="back" id="back"> <a href="index.html">Back</a></button>
+            </div>
+        </div>
+        </form>
+    </div>
+
+</body>
+
+</html>
