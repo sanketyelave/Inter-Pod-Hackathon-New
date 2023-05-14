@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Webwiz-Learn</title>
+    <link rel="shortcut icon" type="image" href="./assets/logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="learn.css">
+</head>
+
+<body>
+    <div class="learnt show">
+        <p class="welcome">Log in to get started<br><br></p> <br><br>
+        <img src="./assets/logo.png" alt="Logo" class="logo" />
+        <br><br>
+        <form class="login">
+            <input type="text" placeholder="user" class="login__input login__input--user name" /> <br><br>
+            <!-- In practice, use type="password" -->
+            <input type="text" placeholder="PIN" maxlength="4" class="login__input login__input--pin pass" /><br><br>
+            <button class="login__btn check">Login</button>
+            <br>
+            <button><a href="index.html">Home</a></button>
+        </form>
+        <br><br>
+        <h2>USER- webwiz<br>PIN- 2023</h2>
+    </div>
+    <div class="sanket hide">
+        <div class="sank">
+
+            <div class="container">
+                <div class="mySlides fade">
+                    <div class="numbertext">
+                        <h1>HTML</h1>
+                    </div>
+
+                    <video src="./assets/htmlvideo.mp4" id="slides"></video>
+                </div>
+
+                <div class="mySlides fade">
+                    <div class="numbertext">
+                        <h1>CSS</h1>
+                    </div>
+                    <video src="./assets/cssvideo.mp4" id="slides"></video>
+                </div>
+
+                <div class="mySlides fade">
+                    <div class="numbertext">
+                        <h1>JavaScript</h1>
+                    </div>
+                    <video src="./assets/jsvideo.mp4" id="slides"></video>
+                </div>
+
+
+
+                <a class="prev" onclick="plusSlides(-1)">❮</a>
+                <a class="next" onclick="plusSlides(1)">❯</a>
+            </div>
+            <button class="back"><a href="index.html">Back</a></button>
+        </div>
+
+    </div>
+</body>
+<script src="learm.js"></script>
+
+</html>

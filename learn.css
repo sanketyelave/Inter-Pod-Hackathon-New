@@ -1,0 +1,251 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #444;
+    background-color: #f3f3f3;
+    height: 100vh;
+    padding: 2rem;
+}
+
+.welcome {
+    font-size: 1.9rem;
+    font-weight: 500;
+}
+
+.logo {
+    height: 5.25rem;
+    margin-left: 50rem;
+}
+
+.login {
+    display: flex;
+    justify-content: center;
+}
+
+.login__input {
+    border: none;
+    padding: 0.5rem 2rem;
+    font-size: 1.6rem;
+    font-family: inherit;
+    text-align: center;
+    width: 12rem;
+    border-radius: 10rem;
+    margin-right: 1rem;
+    color: inherit;
+    border: 1px solid #fff;
+    transition: all 0.3s;
+}
+
+.login__input:focus {
+    outline: none;
+    border: 1px solid #ccc;
+}
+
+.login__input::placeholder {
+    color: #bbb;
+}
+
+.login__btn,
+button {
+    border: none;
+    background: none;
+    font-size: 2.2rem;
+    color: inherit;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.login__btn:hover,
+.login__btn:focus,
+.btn--sort:hover,
+.btn--sort:focus,
+button {
+    outline: none;
+    color: #777;
+}
+
+.h1,
+.numbertext {
+    font-size: 2.6rem;
+    color: rgb(12, 12, 12);
+    font-family: cursive;
+
+}
+
+.welcome {
+    text-align: center;
+}
+
+.logo {
+    width: 4rem;
+    margin: auto;
+}
+
+.learnt {
+    text-align: center;
+}
+
+.hide {
+    display: none;
+}
+
+.show {
+    display: none;
+}
+
+.sanket {
+    width: 50%;
+    margin: auto;
+    text-align: center;
+}
+
+#slides {
+    width: 50rem;
+    height: 50rem;
+    margin: auto;
+    border: 1px solid black;
+    box-shadow: 0.4rem 0.4rem 1.5rem rgba(58, 11, 147, 0.999);
+    margin-top: 2rem;
+}
+
+
+.container {
+    display: inline-block;
+    position: relative;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+}
+
+.demo {
+    opacity: 0.7;
+    cursor: pointer;
+    max-width: 100%;
+    height: auto;
+    width: 100%;
+}
+
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 45%;
+    width: auto;
+    height: auto;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 0 3px 3px 0;
+}
+
+.prev {
+    left: 0%;
+}
+
+.next {
+    border-radius: 3px 0 0 3px;
+    right: 0%
+}
+
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+    transition-duration: 0.4s;
+}
+
+
+/* .numbertext {
+    color: #f2f2f2;
+    background-color: black;
+    font-size: 1.5vw;
+    padding: 8px 12px;
+    position: absolute;
+    top: 10px;
+    left: 1%;
+    border: 2px solid black;
+    border-radius: 50%;
+} */
+
+.caption-container {
+    float: right;
+    position: relative;
+    top: -39.5vw;
+    width: 50%;
+    height: 39.5vw;
+    text-align: center;
+    background-color: rgb(249, 235, 200);
+    color: rgb(72, 35, 35);
+    font-size: 1.4vw;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    border: 2px groove brown;
+    padding: 2vw;
+}
+
+b {
+    text-decoration: underline 2px;
+}
+
+#caption {
+    height: 35vw;
+    position: relative;
+    top: 2vw;
+}
+
+/* .row {
+    position: relative;
+    top: -38vw;
+    display: flex;
+    width: 100%;
+    border: 1px groove brown;
+    background-color: #f3df98;
+} */
+
+/* .active,
+.demo:hover {
+    opacity: 1;
+    transition-duration: 0.5s;
+    border: 1px solid brown;
+}
+
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+} */
+
+@keyframes fade {
+    from {
+        opacity: 0.4;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+button {
+    border: none;
+    padding: 0.5rem 2rem;
+    font-size: 1.6rem;
+    font-family: inherit;
+    text-align: center;
+    width: 12rem;
+    border-radius: 1rem;
+    margin-left: 2rem;
+    color: inherit;
+    border: 1px solid #fff;
+    transition: all 0.3s;
+}
+
+a {
+    text-decoration: none;
+}
