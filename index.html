@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Webwiz</title>
+    <link rel="shortcut icon" type="image" href="./assets/logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Foldit&family=Playfair+Display:wght@800&display=swap"
+        rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            font-size: 100%;
+
+        }
+
+        a {
+            text-decoration: none;
+            font-size: 1.3rem;
+            color: aliceblue;
+        }
+
+        a:hover {
+            color: #908f8f;
+        }
+
+        /* a:hover {
+    color: darkgoldenrod;
+} */
+
+        li {
+            list-style-type: none;
+        }
+
+        header {
+            /* height: 8rem;
+    position: sticky; */
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 0;
+            /* overflow-x: hidden; */
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .navbar {
+            background-color: rgba(0, 0, 0, 0.5);
+            /* width: 30%; */
+            /* border-radius: 0.625rem; */
+            border: 0.0625rem solid rgba(0, 0, 0, 0.7);
+            /* box-shadow: 0.125rem 0.125rem 0.9375rem rgba(0, 0, 0, 0.3); */
+            width: 100%;
+            height: 80px;
+            padding: 0 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            /* position: sticky; */
+        }
+
+        i {
+            color: #fff;
+            margin-right: 10px;
+        }
+
+        .navbar .logo {
+            width: 3rem;
+            border-radius: 75%;
+        }
+
+        .navbar .tabs {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .navbar .togglebutton {
+            color: cornsilk;
+            cursor: pointer;
+            display: none;
+            /* overflow-x: hidden; */
+        }
+
+        .togglebutton img {
+            width: 5rem;
+        }
+
+        .register {
+            background-color: bisque;
+            color: black;
+            padding: 0.5rem 1rem;
+            border: none;
+            border-radius: 4px;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            margin-right: 5rem;
+            margin-top: 0.6rem;
+        }
+
+        .register:hover {
+            background-color: rgb(249, 210, 159);
+        }
+
+        .register a {
+            color: black;
+        }
+
+        /* /responsive/ */
+        @media screen and (max-width:600px) {
+
+            .navbar .tabs,
+            .navbar .register {
+                display: none;
+            }
+
+            .navbar .togglebutton {
+                display: block;
+                background-color: transparent;
+                border: none;
+            }
+
+            .header {
+                position: relative;
+            }
+        }
+
+        @media screen and (max-width:600px) {
+
+            .navbar .tabs,
+            .navbar .register {
+                display: none;
+            }
+
+            .navbar .togglebutton {
+                display: block;
+            }
+
+            .dropdown {
+                display: block;
+            }
+
+        }
+
+
+
+        .dropdown {
+            position: absolute;
+            right: 2rem;
+            top: auto;
+            width: 200px;
+            text-align: center;
+            height: 0;
+            background: rgb(35, 25, 45);
+            backdrop-filter: blur(15px);
+            border-radius: 10px;
+            overflow: hidden;
+            margin-top: 5rem;
+            transition: height .2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .dropdown.open {
+            height: 200px;
+            text-align: center;
+            padding-top: 10px;
+        }
+
+        .dropdown-tabs {
+            padding: 0.7rem;
+        }
+
+
+
+        body {
+            background-image: url(./assets/gi7.webp);
+            background-size: 80.25rem;
+            background-repeat: no-repeat;
+            background-position: center;
+            height: 0em;
+            overflow-x: hidden;
+            z-index: 2;
+            background-color: rgba(0, 8, 29, 255);
+
+        }
+
+        #top {
+            text-align: center;
+            font-size: 3.75rem;
+        }
+
+        #htop {
+            margin-top: 11.25rem;
+            z-index: 1;
+            color: #fff;
+        }
+
+        h5 {
+            font-size: 1.875rem;
+            margin-top: 12.5rem;
+            cursor: pointer;
+            text-shadow: 0.2rem 0.2rem 1.5rem rgba(250, 248, 248, 0.9);
+            text-decoration: underline;
+            text-align: center;
+        }
+
+        h5:hover {
+            color: #a6a3a3
+        }
+
+        h1 {
+            margin-top: 5.425rem;
+            text-shadow: 0.2rem 0.2rem 1.5rem rgba(0, 0, 0, 0.9);
+            color: #fff;
+            font-size: 5.8rem;
+            text-align: center;
+            font-family: cursive;
+        }
+
+        @media screen and (max-width:478px) {
+            h1 {
+                font-size: 3rem;
+            }
+        }
+
+        a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        #content {
+            display: grid;
+            grid-template-columns: auto auto;
+            margin-top: 9rem;
+            margin-bottom: 5rem;
+            align-content: center;
+        }
+
+        #left {
+            width: 60%;
+            height: 45rem;
+            padding: 2rem;
+            margin-left: 5rem;
+            margin-right: 5rem;
+            text-align: center;
+            vertical-align: center;
+            background-color: rgba(0, 0, 0, 0.001);
+            /* border: 0.1rem solid rgba(255, 255, 255, 0.1); */
+            /* box-shadow: 0.2rem 0.2rem 1.5rem rgba(0, 0, 0, 0.3); */
+            /* border-radius: 0.5rem; */
+
+            margin-top: 3rem;
+
+        }
+
+        #left button {
+            background-color: rgba(0, 0, 0, 0.001);
+            width: 80%;
+            border: 1.5px solid white;
+            border-radius: 0.1rem;
+            box-shadow: 0.2rem 0.2rem 1.5rem rgba(255, 255, 255, 0.1);
+            padding: 1rem;
+        }
+
+        #left button:hover {
+            background-color: rgba(225, 225, 225, 0.4);
+            cursor: pointer;
+
+
+        }
+
+        /* #left:hover {
+    box-shadow: 0.2rem 0.2rem 1.5rem rgba(83, 13, 214, 0.8);
+} */
+
+
+        #img {
+            width: 90%;
+            box-shadow: 0.0625rem 0.0625rem 0.3125rem rgba(0, 0, 0, 0.3);
+            border: 0.0625rem solid rgba(255, 255, 255, 0.3);
+            border-radius: 0.3125rem;
+            margin-bottom: 2rem;
+            border: 0.1rem solid black;
+        }
+
+        button:hover {
+            background-color: rgba(0, 0, 0, 0.7);
+            box-shadow: 0.0625rem 0.0625rem 0.3125rem rgba(0, 0, 0, 0.8);
+        }
+
+        #right {
+            width: 70%;
+            margin: auto;
+        }
+
+        #box {
+            /* background-image: linear-gradient(to right bottom, rgb(222, 14, 45), rgb(10, 27, 122)); */
+            /* background-color: bisque; */
+            background-image: linear-gradient(to right bottom, rgb(77, 17, 74)10%, rgb(3, 16, 89)104%);
+
+            border: 2px solid black;
+            border-radius: 10px;
+            font-size: 1.5rem;
+            margin: 3rem;
+            padding: 2rem;
+            color: #fff;
+        }
+
+        #box:hover {
+            box-shadow: 0.4rem 0.4rem 1.5rem rgba(58, 11, 147, 0.999);
+            padding: 2.1rem;
+        }
+
+        @media screen and (max-width:969px) {
+            /* #content {
+        grid-template-row: auto auto;
+        /* grid-template-rows: auto auto; */
+
+
+            #left {
+                margin: auto;
+                /* height: 67rem; */
+            }
+
+            #right {
+                width: 90%;
+            }
+        }
+
+        h4,
+        h2 {
+            text-align: center;
+        }
+
+        /* @media screen and (max-width:969px) {
+    /* #content {
+        grid-template-columns: auto;
+    } */
+
+        /* #left {
+    /* margin: auto; */
+
+
+        /* #right {
+        width: 90%;
+    } */
+
+
+
+        /* @media screen and (max-width:969px) {
+    /* #content {
+        grid-template-columns: auto;
+    } */
+
+        /* #left {
+    /* margin: auto; */
+        /* height: 49rem; */
+
+
+
+
+        .features {
+            width: 90%;
+            margin: auto;
+            /* background-color: rgb(169, 163, 222); */
+            border-radius: 0.2rem;
+            color: #fff;
+            background-image: linear-gradient(to right bottom, rgb(108, 10, 107), rgba(1, 10, 61, 255)70%);
+            border: 1px solid white
+        }
+
+        .row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 5%;
+        }
+
+        .text-col,
+        .img-col {
+            padding: 20px;
+        }
+
+        .row img {
+            width: 35vw;
+        }
+
+        .text-col h2 {
+            font-size: 3rem;
+        }
+
+        .text-col p {
+            font-size: 1.2rem;
+            font-weight: 600;
+        }
+
+        hr {
+            width: 80%;
+            text-align: center;
+            margin: auto;
+            border: 3.1px solid rgb(35, 25, 45);
+            border-radius: 4rem;
+        }
+
+        @media screen and (max-width:975px) {
+
+            .text-col,
+            .img-col {
+                width: 100%;
+            }
+
+            .row img {
+                width: 35vw;
+            }
+
+            .text-col h2 {
+                font-size: 1.5rem;
+            }
+
+            .text-col p {
+                font-size: 1rem;
+                font-weight: 600;
+            }
+        }
+
+        .footer {
+            background-color: rgba(255, 255, 255, 0.5);
+
+            height: 80px;
+            padding: 0 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            overflow-x: hidden;
+            margin-top: 4.5rem;
+            color: rgba(0, 8, 29, 255);
+
+        }
+
+        .footer p {
+            font-size: 1.2rem;
+            font-weight: 100;
+        }
+
+        .icons {
+            width: 2rem;
+            margin-left: 10px;
+        }
+
+        .icons:hover {
+            cursor: pointer;
+        }
+
+        @media screen and (max-width:700px) {
+            .footer p {
+                font-size: 1.2rem;
+            }
+
+            .icons {
+                width: 1.5rem;
+            }
+        }
+
+        @media (max-width:700px) {
+            html {
+                font-size: 70%;
+            }
+
+            #content {
+                grid-template-columns: auto;
+            }
+
+            #left {
+                margin-bottom: 0rem;
+            }
+
+            #box {
+                margin-top: 2rem;
+            }
+        }
+
+        @media (max-width:1050px) {
+            html {
+                font-size: 83.09%;
+            }
+        }
+    </style>
+</head>
+<header>
+    <nav class="navbar">
+        <img src="./assets/logo.png" class="logo">
+        <ul class="tabs">
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="index2.html">TEAM</a></li>
+            <li><a href="index3.html">ABOUT US</a></li>
+            <li><a href="learn.html"> <i class="fa fa-unlock-alt"></i>LEARN</a></li>
+        </ul>
+        <button type="button" class="register"> <a href="registor.html">Register</a></button>
+        <button type="button" class="togglebutton"><img src="https://img.icons8.com/office/100/menu--v1.png"
+                alt="menu--v1" /></div>
+    </nav>
+
+    <div class="dropdown">
+        <div class="dropdown-tabs"><a href="index.html">HOME</a></div>
+        <div class="dropdown-tabs"><a href="index2.html">TEAM</a></div>
+        <div class="dropdown-tabs"><a href="index3.html">ABOUT US</a></div>
+        <div class="dropdown-tabs"><a href="learn.html"><i class="fa fa-unlock-alt"></i>LEARN</a></a></div>
+
+        <div><button type="button" class="register"><a href="registor.html">Register</a></button></div>
+    </div>
+</header>
+
+<body>
+
+    <div id="top">
+        <div id="htop">
+            <h1>
+
+
+                &#x3c/Webwiz&#x3e
+
+            </h1>
+            <div class="slide">
+                <h5> <a href="#content"> Register Now<br> &#x2304
+                    </a></h5>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="features">
+        <div class="row">
+            <div class="text-col" id="text-col-1">
+                <h2>Technical team</h2>
+                <p>Our Technical Team consists of the brightest of developers who find the solutions to problems people
+                    don't dare to dream.</p>
+            </div>
+            <div class="img-col">
+                <img
+                    src="https://www.clariwell.in/resources/uploads/Technical-Highlights-and-Roles-of-Mechanical-Design-Engineers.webp">
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="img-col">
+                <img
+                    src="https://img.freepik.com/premium-photo/design-word-cloud-innovation-idea-creativity-design-concept_505353-280.jpg">
+            </div>
+            <div class="text-col" id="text-col-2">
+                <h2>Design team</h2>
+                <p>Designers who enchant the eyes and change the tech world one UI at a time. Dive into the world of
+                    Designing as an irrefutable part of the club.
+                <p>
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="text-col" id="text-col-3">
+                <h2>Content team</h2>
+                <p>Content that is easy to comprehend and tough to forget. Help us make in the mark of everyone that
+                    comes
+                    across the name Webwiz.</p>
+            </div>
+            <div class="img-col">
+                <img
+                    src="https://www.acquia.com/sites/default/files/legacy/images/2017-12/getting_started_with_content_strategy_4.jpg">
+            </div>
+        </div>
+    </div>
+
+    <div id="content">
+        <div id="left">
+            <div class="registor"><img src="./assets/f1.jpg" id="img"> </div>
+            <br><br>
+            <div class="buttons">
+                <button><a href="registor.html">Register 🌐</a></button>
+                <br> <br>
+                <button><a href="index2.html">Team 🧠</a></button>
+                <br> <br>
+                <button><a href="index3.html">About Us 🪪</a></button>
+
+            </div>
+        </div>
+        <div id="right">
+            <div id="box">
+                <h4>Practical Guide</h4> <br>
+                <p>We guide you everytime you need us. Literally anywhere you want to go we have a guide for that.</p>
+            </div>
+            <div id="box">
+                <h4>Made for Students</h4> <br>
+                <p>If you are crazy about development we are crazy about you. Any other barrier that you think exists,
+                    DOESN'T.</p>
+            </div>
+            <div id="box">
+                <h4>Development</h4> <br>
+                <p>We focus on Design as much as developing. At last the eye sees it first.</p>
+
+            </div>
+        </div>
+    </div>
+
+    </div>
+    <footer>
+        <nav class="footer">
+            <div>
+                <p>Webwiz © 2023 All rights reserved.</p>
+            </div>
+            <div>
+                <a href="https://www.github.com/Webwiznitr"><img class="icons"
+                        src="https://img.icons8.com/ios-filled/50/github.png"></a>
+                <a href="https://www.instagram.com/webwiz.nitr"><img class="icons"
+                        src="https://img.icons8.com/ios-filled/50/instagram-new--v1.png"></a>
+                <a href="https://www.linkedin.com/company/webwiz-nitr/"> <img class="icons"
+                        src="https://img.icons8.com/ios-filled/50/linkedin.png"> </a>
+                <a href="https://www.youtube.com/channel/UC9yM_PkV0QIIsPA3qPrp3zw"><img class="icons"
+                        src="https://img.icons8.com/ios-filled/50/youtube-play.png"></a>
+                <a href="https://medium.com/webwiznitr"><img class="icons"
+                        src="https://img.icons8.com/ios-filled/50/medium-monogram--v1.png"> </a>
+            </div>
+        </nav>
+    </footer>
+</body>
+<script>
+    const toggleBtn = document.querySelector('.togglebutton');
+    const toggleIcon = document.querySelector('.togglebutton img');
+    const drop = document.querySelector('.dropdown');
+
+    toggleBtn.onclick = function () {
+        drop.classList.toggle('open');
+        const isOpen = drop.classList('open');
+    }
+</script>
+
+</html>
